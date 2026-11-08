@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dual-process-memory-governor"
+version = "0.1.0"
+description = "Dual-process cognitive governor routing high-confidence queries to fast intuitive retrieval and complex queries to structured graph traversal"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+dual-process-memory-governor = "dual_process_memory_governor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dual_process_memory_governor*"]
